@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.4"
+  version: "1.0.3"
 
 package:
   name: ansible-aap-api-client
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/ansible-aap-api-client/ansible_aap_api_client-${{ version }}.tar.gz
-  sha256: 0d133ac8b01fe84b6c57b1d1a3c71c979dbd2ba782bed661dac854d3e9f93786
+  sha256: 6b1cf71588e60a0743dd7c0fb2e24c27c4c1d1aa18e055fff0c99f354304d786
 
 build:
   noarch: python
@@ -23,7 +23,8 @@ requirements:
     - setuptools >=67.6.0
   run:
     - python >=${{ python_min }}
-    - requests ~=2.32.0
+    - niquests >=3.18.6
+    - urllib3 >=2.7.0
 
 tests:
   - python:
